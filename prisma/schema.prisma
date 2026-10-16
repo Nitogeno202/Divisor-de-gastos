@@ -1,0 +1,29 @@
+generator client { provider = "prisma-client-js" }
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Group {
+  id        String    @id @default(cuid())
+  name      String
+  createdAt DateTime  @default(now())
+  people    Person[]
+  expenses  Expense[]
+}
+model Person {
+  id      String @id @default(cuid())
+  name    String
+  groupId String
+  group   Group  @relation(fields: [groupId], references: [id], onDelete: Cascade)
+}
+model Expense {
+  id        String   @id @default(cuid())
+  desc      String
+  amount    Int
+  payerId   String
+  among     String[]
+  createdAt DateTime @default(now())
+  groupId   String
+  group     Group    @relation(fields: [groupId], references: [id], onDelete: Cascade)
+}
