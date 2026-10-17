@@ -2,7 +2,7 @@
 
 Aplicación web para dividir gastos cuando salís con amigos. Armás un grupo, cargás quién pagó cada cosa y la app te dice **quién le paga a quién** para quedar a mano, con la menor cantidad de transferencias posible.
 
-🔗 **Probala acá:** [PEGAR LINK DE RENDER]
+🔗 **Probala acá:** [(https://divisor-de-gastos-t6ww.onrender.com/)]
 
 > Es un proyecto chico que hice para practicar, con ayuda de IA para armarlo y entender cómo funciona todo.
 
